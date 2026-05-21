@@ -12,6 +12,7 @@ export default function Home() {
     <Section />
     <ContactPage />
     <AboutUs />
+    <h1>Home Page End</h1>
     </>
   )
 }
