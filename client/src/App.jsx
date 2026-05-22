@@ -12,10 +12,7 @@ function App() {
 
   return (
     <>
-      <h1 class='mx-auto bg-red-200 outline-black text-gray-500'>Aniket Tikkal</h1>
-      <Navbar />
-      <Home />
-      <Footer />
+      
     </>
   )
 }
