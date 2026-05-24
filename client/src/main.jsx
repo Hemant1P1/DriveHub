@@ -7,6 +7,13 @@ import Layout from './Layout.jsx'
 import Home from './Pages/Home/Home.jsx'
 import Signup from './Pages/Signup/Signup.jsx'
 import Login from './Pages/Login/Login.jsx'
+import Agriculture from './Pages/Agriculture/Agriculture.jsx'
+import Construction from './Pages/Construction/Construction.jsx'
+import Emergency from './Pages/Emergency/Emergency.jsx'
+import HeavyLoad from './Pages/HeavyLoad/HeavyLoad.jsx'
+import LightLoad from './Pages/LightLoad/LightLoad.jsx'
+import RentalCars from './Pages/RentalCars/RentalCars.jsx'
+import Trip from './Pages/Trip/Trip.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +31,34 @@ const router = createBrowserRouter([
       {
         path:"login",
         element:<Login />
+      },
+      {
+        path:"agriculture",
+        element:<Agriculture />
+      },
+      {
+        path:"construction",
+        element:<Construction />
+      },
+      {
+        path:"emergency",
+        element:<Emergency />
+      },
+      {
+        path:"heavyload",
+        element:<HeavyLoad />
+      },
+      {
+        path:"lightload",
+        element:<LightLoad />
+      },
+      {
+        path:"rentalcars",
+        element:<RentalCars />
+      },
+      {
+        path:"trip",
+        element:<Trip />
       }
     ]
   }
