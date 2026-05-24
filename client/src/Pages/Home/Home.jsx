@@ -7,12 +7,10 @@ import AboutUs from '../../Views/HomeView/AboutUs'
 export default function Home() {
   return (
     <>
-    <h1>Home Page</h1>
     <SlideBar />
     <Section />
     <ContactPage />
     <AboutUs />
-    <h1>Home Page End</h1>
     </>
   )
 }
