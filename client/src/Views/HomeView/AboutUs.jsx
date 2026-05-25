@@ -33,19 +33,19 @@ export default function AboutUs() {
         <TeamCard
           name="Amita Dongardive"
           role="UI/UX Designer"
-          image="https://picsum.photos/200?3"
+          image="https://github.com/amita-codess.png"
           about="Creates modern UI designs."
-          linkedin="https://linkedin.com"
-          github="https://github.com"
+          linkedin="https://www.linkedin.com/in/amita-dongardive-9a3840266/"
+          github="https://github.com/amita-codess"
         />
 
         <TeamCard
           name="Hemant Pathare"
           role="Full Stack Developer"
-          image="https://picsum.photos/200?4"
+          image="https://github.com/Hemant1P1.png"
           about="Works on frontend and APIs."
-          linkedin="https://linkedin.com"
-          github="https://github.com"
+          linkedin="https://www.linkedin.com/in/hemant-pathare-79288b292/"
+          github="https://github.com/Hemant1P1/"
         />
 
       </div>

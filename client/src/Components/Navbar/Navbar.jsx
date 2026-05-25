@@ -20,7 +20,7 @@ function Navbar() {
             {/* Menu Links */}
             <div className="flex gap-8 text-lg font-medium">
               <a
-                href="#"
+                href="/"
                 style={{ textDecoration: "none" }}
                 className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
               >
@@ -44,11 +44,11 @@ function Navbar() {
               </a>
 
               <a
-                href="#"
+                href="./signup"
                 style={{ textDecoration: "none" }}
                 className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
               >
-                Contact
+                Signup
               </a>
             </div>
 
