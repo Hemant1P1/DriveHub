@@ -1,140 +1,149 @@
-import React from "react";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-cyan-500">
+    <>
+      <footer className="bg-slate-900 text-slate-300 mt-20">
 
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="max-w-7xl mx-auto px-6 py-14">
 
-        {/* Horizontal Layout */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* Logo Section */}
-          <div className="lg:w-[30%]">
-            <h1 className="text-4xl font-extrabold">
-              <span className="text-cyan-400">Drive</span>
-              <span className="text-white">Hub</span>
-            </h1>
-
-            <p className="text-gray-400 mt-4 leading-7 text-sm">
-              DriveHub provides Agriculture Vehicles, Car Rental,
-              Emergency Services, and Mini Bus Trip Travel
-              with affordable and trusted transportation solutions.
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-6">
-              <div className="w-10 h-10 rounded-full bg-gray-800 hover:bg-cyan-500 flex items-center justify-center cursor-pointer transition">
-                🌐
-              </div>
-
-              <div className="w-10 h-10 rounded-full bg-gray-800 hover:bg-cyan-500 flex items-center justify-center cursor-pointer transition">
-                📘
-              </div>
-
-              <div className="w-10 h-10 rounded-full bg-gray-800 hover:bg-cyan-500 flex items-center justify-center cursor-pointer transition">
-                📸
-              </div>
-
-              <div className="w-10 h-10 rounded-full bg-gray-800 hover:bg-cyan-500 flex items-center justify-center cursor-pointer transition">
-                🐦
-              </div>
-            </div>
-          </div>
-
-          {/* Links Section */}
-          <div className="flex flex-wrap gap-10 md:gap-16">
-
-            {/* Services */}
+            {/* Company Info */}
             <div>
-              <h2 className="text-xl font-bold text-cyan-400 mb-4">
-                Services
-              </h2>
+              <h1 className="text-3xl font-bold text-white">
+                Drive<span className="text-red-500">Hub</span>
+              </h1>
 
-              <ul className="space-y-3 text-gray-400">
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  🚜 Agriculture Vehicles
-                </li>
+              <p className="mt-4 text-slate-400 leading-7">
+                Reliable vehicle rental solutions for family trips,
+                emergency services, agriculture, construction and
+                commercial transportation.
+              </p>
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  🚗 Car Rental
-                </li>
+              <div className="flex gap-4 mt-6">
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  🚑 Emergency Services
-                </li>
+                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition">
+                  <FaFacebookF />
+                </a>
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  🚌 Mini Bus Travel
-                </li>
-              </ul>
+                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition">
+                  <FaInstagram />
+                </a>
+
+                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition">
+                  <FaLinkedinIn />
+                </a>
+
+                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition">
+                  <FaGithub />
+                </a>
+
+              </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h2 className="text-xl font-bold text-cyan-400 mb-4">
+              <h2 className="text-white font-semibold text-lg mb-4">
                 Quick Links
               </h2>
 
-              <ul className="space-y-3 text-gray-400">
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  Home
-                </li>
+              <ul className="space-y-3">
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  About
-                </li>
+                <li><Link to="/" className="hover:text-white">Home</Link></li>
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  Services
-                </li>
+                <li><Link to="/about" className="hover:text-white">About Us</Link></li>
 
-                <li className="hover:text-cyan-400 cursor-pointer transition">
-                  Contact
-                </li>
+                <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
+
+                <li><Link to="/team" className="hover:text-white">Our Team</Link></li>
+
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Services */}
             <div>
-              <h2 className="text-xl font-bold text-cyan-400 mb-4">
-                Contact
+              <h2 className="text-white font-semibold text-lg mb-4">
+                Services
               </h2>
 
-              <div className="space-y-3 text-gray-400 text-sm">
-                <p>📍 Mumbai, Maharashtra</p>
-                <p>📞 +91 98765 43210</p>
-                <p>✉ drivehub@gmail.com</p>
-                <p>⏰ 24/7 Support</p>
+              <ul className="space-y-3">
+
+                <li><Link to="/rentalcars" className="hover:text-white">Car Rental</Link></li>
+
+                <li><Link to="/trip" className="hover:text-white">Mini Bus Travel</Link></li>
+
+                <li><Link to="/emergency" className="hover:text-white">Emergency Vehicles</Link></li>
+
+                <li><Link to="/agriculture" className="hover:text-white">Agriculture Vehicles</Link></li>
+
+                <li><Link to="/construction" className="hover:text-white">Construction Vehicles</Link></li>
+
+                <li><Link to="/heavyload" className="hover:text-white">Heavy Vehicles</Link></li>
+
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h2 className="text-white font-semibold text-lg mb-4">
+                Contact Info
+              </h2>
+
+              <div className="space-y-3 text-slate-400">
+
+                <p>📍 Pune, Maharashtra</p>
+
+                <p>📞 +91 XXXXX XXXXX</p>
+
+                <p>✉ support@drivehub.com</p>
+
+                <p>🕒 Available 24/7</p>
+
               </div>
             </div>
+
           </div>
+
+          {/* Bottom Footer */}
+          <div className="border-t border-slate-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <p className="text-sm text-slate-500 text-center">
+              © 2026 DriveHub. All Rights Reserved.
+            </p>
+
+            <div className="flex gap-6 text-sm">
+
+              <Link
+                to="/privacy-policy"
+                className="hover:text-white"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                to="/terms"
+                className="hover:text-white"
+              >
+                Terms & Conditions
+              </Link>
+
+              <Link
+                to="/contact"
+                className="hover:text-white"
+              >
+                Support
+              </Link>
+
+            </div>
+
+          </div>
+
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 mt-10 pt-5 flex flex-col md:flex-row justify-between items-center gap-4">
-
-          <p className="text-gray-500 text-sm text-center">
-            © 2026 DriveHub. All Rights Reserved.
-          </p>
-
-          <div className="flex gap-6 text-gray-400 text-sm">
-            <p className="hover:text-cyan-400 cursor-pointer transition">
-              Privacy Policy
-            </p>
-
-            <p className="hover:text-cyan-400 cursor-pointer transition">
-              Terms & Conditions
-            </p>
-
-            <p className="hover:text-cyan-400 cursor-pointer transition">
-              Help Center
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </footer>
-  );
+      </footer>
+    </>
+  )
 }

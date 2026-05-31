@@ -1,91 +1,107 @@
-// Signup.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import SignupPage from '../../assets/HomeImages/SignupPage.png'
 
 export default function Signup() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen grid lg:grid-cols-2">
 
-      <div className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8">
+      {/* Left Side */}
+      <div className="hidden lg:flex items-center justify-center bg-slate-50 p-10">
+        <img
+          src={SignupPage}
+          alt="Signup"
+          className="max-w-lg w-full"
+        />
+      </div>
 
-        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-          Create Account
-        </h2>
+      {/* Right Side */}
+      <div className="flex items-center justify-center px-6 py-10">
 
-        <form className="space-y-5">
+        <div className="w-full max-w-md">
 
-          {/* Name */}
-          <div>
-            <label className="block mb-2 text-sm font-medium">
-              Full Name
-            </label>
+          <h1 className="text-4xl font-bold text-slate-900">
+            Create Account 🚀
+          </h1>
+
+          <p className="text-slate-500 mt-2 mb-8">
+            Join DriveHub and start your journey today.
+          </p>
+
+          <form className="space-y-5">
 
             <input
               type="text"
-              placeholder="Enter your name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Full Name"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label className="block mb-2 text-sm font-medium">
-              Email
-            </label>
 
             <input
               type="email"
-              placeholder="Enter your email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Email Address"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
-          </div>
-
-          {/* Password */}
-          <div>
-            <label className="block mb-2 text-sm font-medium">
-              Password
-            </label>
-
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          {/* Contact */}
-          <div>
-            <label className="block mb-2 text-sm font-medium">
-              Contact Number
-            </label>
 
             <input
               type="text"
-              placeholder="Enter contact number"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Contact Number"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
+
+            <input
+              type="password"
+              placeholder="Password"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
+            />
+
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
+            />
+
+            <label className="flex gap-2 text-sm">
+
+              <input type="checkbox" />
+
+              I agree to the Terms & Conditions
+
+            </label>
+
+            <button
+              className="w-full bg-slate-800 hover:bg-slate-900 text-white py-3 rounded-xl font-semibold"
+            >
+              Create Account
+            </button>
+
+          </form>
+
+          <div className="flex items-center my-6">
+            <div className="flex-grow border-t"></div>
+            <span className="px-4 text-gray-400">OR</span>
+            <div className="flex-grow border-t"></div>
           </div>
 
-          {/* Button */}
           <button
-            type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 transition duration-300 text-white py-3 rounded-lg font-semibold"
+            className="w-full border border-slate-300 py-3 rounded-xl flex items-center justify-center gap-3 hover:bg-slate-50"
           >
-            Sign Up
+            <FcGoogle size={22} />
+            Signup with Google
           </button>
-        </form>
 
-        {/* Login Link */}
-        <p className="text-center text-sm mt-6 text-gray-600">
-          Already have an account?{" "}
-          <Link
-            to="/login"
-            className="text-blue-600 font-semibold hover:underline"
-          >
-            Login
-          </Link>
-        </p>
+          <p className="text-center mt-6 text-slate-600">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="font-semibold text-slate-900"
+            >
+              Login
+            </Link>
+          </p>
+
+        </div>
+
       </div>
     </div>
   );

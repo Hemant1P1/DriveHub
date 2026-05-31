@@ -1,143 +1,96 @@
 import React from "react";
-import contact from "../../assets/contact.jpg";
+import ContactUs from '../../assets/CardsImages/ContactUs.png'
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 sm:p-6">
-      
-      {/* Main Container */}
-      <div className="bg-white shadow-2xl rounded-2xl overflow-hidden w-full max-w-6xl grid grid-cols-1 md:grid-cols-2">
-        
-        {/* Image Section */}
-        <div className="bg-blue-100 flex items-center justify-center p-5">
-          <img
-            src={contact}
-            alt="Contact"
-            className="
-              w-full
-              h-[250px]
-              sm:h-[350px]
-              md:h-full
-              object-cover
-              rounded-2xl
-            "
-          />
-        </div>
+    <section className="min-h-screen bg-slate-50 py-12 px-4">
+      <div className="max-w-7xl mx-auto">
 
-        {/* Form Section */}
-        <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-center">
-          
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-6">
-            Contact Us
-          </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          <form className="space-y-5">
-            
-            {/* Name */}
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Name
-              </label>
+          {/* Contact Form */}
+          <div className="bg-white rounded-3xl shadow-lg p-6 md:p-10">
 
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="
-                  w-full
-                  border border-gray-300
-                  rounded-lg
-                  px-4 py-3
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-blue-400
-                "
-              />
-            </div>
+            <span className="text-sm font-semibold tracking-widest text-slate-500 uppercase">
+              Contact Us
+            </span>
 
-            {/* Email */}
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Email
-              </label>
+            <h1 className="text-4xl font-bold text-slate-900 mt-3">
+              Get In Touch
+            </h1>
 
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="
-                  w-full
-                  border border-gray-300
-                  rounded-lg
-                  px-4 py-3
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-blue-400
-                "
-              />
-            </div>
+            <p className="text-slate-600 mt-4 mb-8">
+              Have questions about our services? We'd love to hear from you.
+              Send us a message and our team will respond as soon as possible.
+            </p>
 
-            {/* Contact Number */}
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Contact Number
-              </label>
+            <form className="space-y-5">
 
-              <input
-                type="tel"
-                placeholder="Enter your number"
-                className="
-                  w-full
-                  border border-gray-300
-                  rounded-lg
-                  px-4 py-3
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-blue-400
-                "
-              />
-            </div>
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium">Full Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="input input-bordered w-full"
+                />
+              </div>
 
-            {/* Message */}
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Message
-              </label>
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium">Email</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="input input-bordered w-full"
+                />
+              </div>
 
-              <textarea
-                rows="4"
-                placeholder="Write your message..."
-                className="
-                  w-full
-                  border border-gray-300
-                  rounded-lg
-                  px-4 py-3
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-blue-400
-                  resize-none
-                "
-              ></textarea>
-            </div>
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium">Subject</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="input input-bordered w-full"
+                />
+              </div>
 
-            {/* Button */}
-            <button
-              type="submit"
-              className="
-                w-full
-                bg-blue-500
-                hover:bg-blue-600
-                text-white
-                font-semibold
-                py-3
-                rounded-lg
-                transition duration-300
-              "
-            >
-              Send Message
-            </button>
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium">Message</span>
+                </label>
+                <textarea
+                  rows="5"
+                  placeholder="Write your message..."
+                  className="textarea textarea-bordered w-full"
+                ></textarea>
+              </div>
 
-          </form>
+              <button
+                type="submit"
+                className="btn w-full bg-slate-700 hover:bg-slate-800 text-white border-none"
+              >
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+          {/* Illustration */}
+          <div className="flex justify-center">
+            <img
+              src={ContactUs}
+              alt="Contact Us"
+              className="w-full max-w-lg object-contain"
+            />
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }

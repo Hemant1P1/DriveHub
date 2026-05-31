@@ -4,61 +4,131 @@ function Navbar() {
   return (
 
     <>
+      <nav>
+        <div className="navbar bg-gray-900 text-white shadow-lg px-4 lg:px-10 sticky top-0 z-50">
 
-      <nav className="bg-gradient-to-r from-slate-900 via-gray-900 to-black shadow-2xl px-8 py-4 border-b border-cyan-500">
-        <div className="flex items-center justify-between">
+          {/* Mobile Menu */}
+          <div className="navbar-start">
+            <div className="dropdown lg:hidden">
+              <div tabIndex={0} role="button" className="btn btn-ghost text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </div>
 
-          {/* Logo */}
-          <div className="text-3xl font-extrabold tracking-wide">
-            <span className="text-cyan-400">Drive</span>
-            <span className="text-white">Hub</span>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-xl bg-gray-800 rounded-box w-56 text-white"
+              >
+                <li><a className="hover:text-red-500">Home</a></li>
+                <li><a className="hover:text-red-500">About</a></li>
+
+                <li>
+                  <details>
+                    <summary>Pages</summary>
+                    <ul>
+                      <li><a>Services</a></li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Blog</a></li>
+                      <li><a>FAQ</a></li>
+                    </ul>
+                  </details>
+                </li>
+
+                <li><a className="hover:text-red-500">Contact Us</a></li>
+              </ul>
+            </div>
+
+            {/* Logo */}
+            <a className="text-2xl font-extrabold tracking-wide cursor-pointer">
+              Drive<span className="text-red-500">Finder</span>
+            </a>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal gap-3 font-medium">
+
+              <li>
+                <a className="hover:text-red-500 transition-all duration-300">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a className="hover:text-red-500 transition-all duration-300">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <details>
+                  <summary className="hover:text-red-500 transition-all duration-300">
+                    Pages
+                  </summary>
+                  <ul className="bg-white text-gray-800 rounded-xl shadow-xl p-2 w-52">
+                    <li><a>Services</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>FAQ</a></li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <a className="hover:text-red-500 transition-all duration-300">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Right Side */}
-          <div className="flex items-center gap-8">
+          <div className="navbar-end gap-3">
 
-            {/* Menu Links */}
-            <div className="flex gap-8 text-lg font-medium">
-              <a
-                href="/"
-                style={{ textDecoration: "none" }}
-                className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
+            <button className="btn btn-sm bg-red-600 border-none hover:bg-red-700 text-white hidden md:flex">
+              Get Started
+            </button>
+
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
               >
-                Home
-              </a>
+                <div className="w-10 rounded-full border-2 border-red-500">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    alt="Profile"
+                  />
+                </div>
+              </div>
 
-              <a
-                href="#"
-                style={{ textDecoration: "none" }}
-                className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 p-2 shadow-xl bg-white text-gray-800 rounded-xl w-52"
               >
-                About
-              </a>
-
-              <a
-                href="#"
-                style={{ textDecoration: "none" }}
-                className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
-              >
-                Services
-              </a>
-
-              <a
-                href="./signup"
-                style={{ textDecoration: "none" }}
-                className="text-gray-200 hover:text-cyan-400 transition duration-300 hover:scale-110"
-              >
-                Signup
-              </a>
-            </div>
-
-            {/* Search Box */}
-            <div>
-              <input
-                type="text"
-                placeholder="Search rides..."
-                className="px-4 py-2 rounded-full bg-gray-800 text-white placeholder-gray-400 border border-cyan-400 outline-none focus:ring-2 focus:ring-cyan-400 shadow-lg"
-              />
+                <li>
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge badge-error text-white">New</span>
+                  </a>
+                </li>
+                <li><a>Dashboard</a></li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
             </div>
 
           </div>

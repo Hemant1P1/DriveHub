@@ -2,6 +2,15 @@ import React from 'react'
 import FeatureCard from '../../Components/Cards/FeaturedCard';
 import Accordian from '../../Components/Accordian/Accordian';
 import { useNavigate } from "react-router-dom";
+import Ambulance from '../../assets/CardsImages/Ambulance.png'
+import Construction from '../../assets/CardsImages/Construction.png'
+import FarmTractor from '../../assets/CardsImages/FarmTractor.png'
+//import HeavyVehicle from '../../assets/CardsImages/HeavyVehicle.png'
+import LightWeight from '../../assets/CardsImages/LightWeight.png'
+import MiniBus from '../../assets/CardsImages/MiniBus.png'
+import FamilyTrip from '../../assets/CardsImages/FamilyTrip.png'
+import HeavyLoad from '../../assets/CardsImages/HeavyLoad.png'
+
 
 export default function Section() {
   const navigate = useNavigate();
@@ -20,7 +29,7 @@ export default function Section() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+              image={FamilyTrip}
               title="Cars! Your Perfect Ride Awaits"
               info="For Family Trips: Spacious cars with ample luggage space for a comfortable journey."
               button="Explore"
@@ -28,7 +37,7 @@ export default function Section() {
             />
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
+              image={Ambulance}
               title="Emergency Ambulance Service!"
               info="For Medical Emergencies: Fast and reliable ambulance service available 24/7."
               button="Book Now"
@@ -36,7 +45,7 @@ export default function Section() {
             />
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
+              image={MiniBus}
               title="Mini Bus for Group Travel Made Easy!"
               info="Comfort & Convenience: Ideal for city tours, events, and long-distance travel."
               button="View More"
@@ -44,7 +53,7 @@ export default function Section() {
             />
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1549924231-f129b911e442"
+              image={LightWeight}
               title="Light Commercial Vehicles!"
               info="Efficient and versatile, perfect for small businesses and urban deliveries."
               button="See Cars"
@@ -52,7 +61,7 @@ export default function Section() {
             />
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+              image={HeavyLoad}
               title="Heavy Commercial Vehicles!"
               info="Built for heavy loads and long hauls, ensuring reliable transportation"
               button="Rent Now"
@@ -60,19 +69,19 @@ export default function Section() {
             />
 
             <FeatureCard
-              image="https://images.unsplash.com/photo-1485291571150-772bcfc10da5"
-              title="Agriculture Vehicles!"
-              info="Efficient and durable, optimizing farming operations for maximum productivity. 🌾"
-              button="Discover"
-              onClick={() => navigate('/agriculture')}
-            />
-
-            <FeatureCard
-              image="https://images.unsplash.com/photo-1485291571150-772bcfc10da5"
+              image={Construction}
               title="Constructions Vehicles!"
               info="Rugged and powerful, designed to handle tough jobs with ease. 🚜"
               button="Discover"
               onClick={() => navigate('/construction')}
+            />
+
+            <FeatureCard
+              image={FarmTractor}
+              title="Agriculture Vehicles!"
+              info="Efficient and durable, optimizing farming operations for maximum productivity. 🌾"
+              button="Discover"
+              onClick={() => navigate('/agriculture')}
             />
 
           </div>
