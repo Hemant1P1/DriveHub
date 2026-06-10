@@ -4,7 +4,7 @@ import TeamCard from "../../Components/Cards/TeamCard";
 export default function AboutUs() {
 
   return (
-    <div className="py-12 px-5 bg-base-200">
+    <div id="about-us" className="py-12 px-5 bg-base-200">
 
       <h1 className="text-4xl font-bold text-center mb-10">
         About Our Team

@@ -31,17 +31,20 @@ function Navbar() {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-xl bg-gray-800 rounded-box w-56 text-white"
               >
-                <li><a className="hover:text-red-500">Home</a></li>
+                <li><a href="/" className="hover:text-red-500">Home</a></li>
                 <li><a className="hover:text-red-500">About</a></li>
 
                 <li>
                   <details>
                     <summary>Pages</summary>
                     <ul>
-                      <li><a>Services</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>Blog</a></li>
-                      <li><a>FAQ</a></li>
+                      <li><a href="/emergency">Emergency</a></li>
+                      <li><a href="/construction">Construction</a></li>
+                      <li><a href="/agriculture">Agriculture</a></li>
+                      <li><a href="/heavyload">HeavyLoad</a></li>
+                      <li><a href="/lightload">LightWeight</a></li>
+                      <li><a href="/rentalcars">RentalCars</a></li>
+                      <li><a href="/trip">Trip</a></li>
                     </ul>
                   </details>
                 </li>
@@ -61,13 +64,13 @@ function Navbar() {
             <ul className="menu menu-horizontal gap-3 font-medium">
 
               <li>
-                <a className="hover:text-red-500 transition-all duration-300">
+                <a href="/" className="hover:text-red-500 transition-all duration-300">
                   Home
                 </a>
               </li>
 
               <li>
-                <a className="hover:text-red-500 transition-all duration-300">
+                <a href="#about-us" className="hover:text-red-500 transition-all duration-300">
                   About
                 </a>
               </li>
@@ -78,16 +81,19 @@ function Navbar() {
                     Pages
                   </summary>
                   <ul className="bg-white text-gray-800 rounded-xl shadow-xl p-2 w-52">
-                    <li><a>Services</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>FAQ</a></li>
+                    <li><a href="/emergency">Emergency</a></li>
+                      <li><a href="/construction">Construction</a></li>
+                      <li><a href="/agriculture">Agriculture</a></li>
+                      <li><a href="/heavyload">HeavyLoad</a></li>
+                      <li><a href="/lightload">LightWeight</a></li>
+                      <li><a href="/rentalcars">RentalCars</a></li>
+                      <li><a href="/trip">Trip</a></li>
                   </ul>
                 </details>
               </li>
 
               <li>
-                <a className="hover:text-red-500 transition-all duration-300">
+                <a href="#contact" className="hover:text-red-500 transition-all duration-300">
                   Contact Us
                 </a>
               </li>
@@ -97,9 +103,11 @@ function Navbar() {
           {/* Right Side */}
           <div className="navbar-end gap-3">
 
-            <button className="btn btn-sm bg-red-600 border-none hover:bg-red-700 text-white hidden md:flex">
-              Get Started
-            </button>
+            <a href="/login">
+              <button className="btn btn-sm bg-red-600 border-none hover:bg-red-700 text-white hidden md:flex">
+                Login
+              </button>
+            </a>
 
             <div className="dropdown dropdown-end">
               <div

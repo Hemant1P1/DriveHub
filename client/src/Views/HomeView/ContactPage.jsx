@@ -3,7 +3,7 @@ import ContactUs from '../../assets/CardsImages/ContactUs.png'
 
 export default function ContactPage() {
   return (
-    <section className="min-h-screen bg-slate-50 py-12 px-4">
+    <section id="contact" className="min-h-screen bg-slate-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
