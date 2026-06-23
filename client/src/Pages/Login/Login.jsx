@@ -1,8 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import LoginPage from '../../assets/HomeImages/LoginPage.png'
+import LoginPage from '../../assets/HomeImages/LoginPage.png';
+
 export default function Login() {
+
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "https://localhost:7041/api/Users/login",
+        formData
+      );
+
+      // store JWT token
+      localStorage.setItem("token", res.data.token);
+
+      alert("Login successful 🚀");
+
+      navigate("/");
+
+    } catch (error) {
+      console.log(error.response?.data || error.message);
+      alert("Login failed ❌");
+    }
+  };
+
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
 
@@ -11,6 +43,7 @@ export default function Login() {
         <img
           src={LoginPage}
           alt="Login"
+
           className="max-w-lg w-full"
         />
       </div>
@@ -28,7 +61,7 @@ export default function Login() {
             Login to access your DriveHub account.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleLogin}>
 
             <div>
               <label className="block mb-2 font-medium">
@@ -38,6 +71,10 @@ export default function Login() {
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="w-full border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:border-slate-600"
               />
             </div>
@@ -50,6 +87,11 @@ export default function Login() {
               <input
                 type="password"
                 placeholder="Enter your password"
+                value={formData.password}
+                onChange={(e) =>
+                  setFormData({ ...formData, password: e.target.value })
+                }
+
                 className="w-full border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:border-slate-600"
               />
             </div>

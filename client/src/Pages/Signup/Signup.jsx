@@ -1,9 +1,40 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { FcGoogle } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
 import SignupPage from '../../assets/HomeImages/SignupPage.png'
 
 export default function Signup() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    mobileNumber: ""
+  });
+
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "https://localhost:7041/api/Users/register",
+        formData
+      );
+
+      alert("Signup successful 🚀");
+      navigate("/login");
+
+    } catch (error) {
+      console.log("Signup Error:", error.response?.data || error.message);
+      alert(error.response?.data || "Signup failed");
+    }
+  };
+
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
 
@@ -29,35 +60,47 @@ export default function Signup() {
             Join DriveHub and start your journey today.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSignup}>
 
             <input
               type="text"
               placeholder="Full Name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
 
             <input
               type="email"
               placeholder="Email Address"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              className="w-full border border-slate-300 rounded-xl px-4 py-3"
+            />
+
+
+
+            <input
+              type="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
               className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
 
             <input
               type="text"
-              placeholder="Contact Number"
-              className="w-full border border-slate-300 rounded-xl px-4 py-3"
-            />
-
-            <input
-              type="password"
-              placeholder="Password"
-              className="w-full border border-slate-300 rounded-xl px-4 py-3"
-            />
-
-            <input
-              type="password"
-              placeholder="Confirm Password"
+              placeholder="Mobile Number"
+              value={formData.mobileNumber}
+              onChange={(e) =>
+                setFormData({ ...formData, mobileNumber: e.target.value })
+              }
               className="w-full border border-slate-300 rounded-xl px-4 py-3"
             />
 
